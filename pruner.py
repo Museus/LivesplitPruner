@@ -83,7 +83,6 @@ for attempt in attempt_history.findall("Attempt"):
         new_attempt_mappings[attempt_id] = new_attempt_id
         attempt.attrib["id"] = new_attempt_id
 
-print(new_attempt_mappings)
 lss_root.find("AttemptCount").text = str(len(attempt_history))
 
 segments = lss_root.find("Segments").findall("Segment")
